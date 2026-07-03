@@ -1,5 +1,5 @@
 {
   "name": "redis",
-  "description": "Redis 缓存 MCP，支持读写和 Key 扫描（项目级安装）",
+  "description": "Redis 缓存 MCP，支持读写和 Key 扫描（项目级安装） [需要环境变量: REDIS_URL]",
   "author": { "name": "Redis" }
 }

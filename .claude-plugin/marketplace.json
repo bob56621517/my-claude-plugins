@@ -15,7 +15,7 @@
     {
       "name": "bocha-search",
       "source": "./bocha-search",
-      "description": "中文搜索引擎，支持网页搜索和 AI 语义结构化卡片查询",
+      "description": "中文搜索引擎，支持网页搜索和 AI 语义结构化卡片查询 [需要环境变量: BOCHA_API_KEY]",
       "author": { "name": "博查搜索" },
       "category": "productivity"
     },
@@ -64,21 +64,21 @@
     {
       "name": "gitlab",
       "source": "./gitlab",
-      "description": "GitLab 仓库/Issue/MR/分支/CI Pipeline 全管理，支持自托管实例",
+      "description": "GitLab 仓库/Issue/MR/分支/CI Pipeline 全管理，支持自托管实例 [需要环境变量: GITLAB_PERSONAL_ACCESS_TOKEN, GITLAB_API_URL]",
       "author": { "name": "GitLab" },
       "category": "development"
     },
     {
       "name": "gitee",
       "source": "./gitee",
-      "description": "Gitee 仓库/Issue/PR/通知/Release 全管理，支持个人/组织/企业",
+      "description": "Gitee 仓库/Issue/PR/通知/Release 全管理，支持个人/组织/企业 [需要环境变量: GITEE_ACCESS_TOKEN]",
       "author": { "name": "Gitee" },
       "category": "development"
     },
     {
       "name": "github",
       "source": "./github",
-      "description": "GitHub 仓库/PR/Issue/代码搜索/Release 全管理",
+      "description": "GitHub 仓库/PR/Issue/代码搜索/Release 全管理 [需要环境变量: GITHUB_PERSONAL_ACCESS_TOKEN]",
       "author": { "name": "GitHub" },
       "category": "development"
     },
@@ -120,28 +120,28 @@
     {
       "name": "postgres",
       "source": "./postgres",
-      "description": "PostgreSQL 数据库读写、表结构和 Schema 查询（项目级安装）",
+      "description": "PostgreSQL 数据库读写、表结构和 Schema 查询（项目级安装） [需要环境变量: POSTGRES_DB_URL]",
       "author": { "name": "PostgreSQL" },
       "category": "development"
     },
     {
       "name": "redis",
       "source": "./redis",
-      "description": "Redis 缓存读写和 Key 扫描（项目级安装）",
+      "description": "Redis 缓存读写和 Key 扫描（项目级安装） [需要环境变量: REDIS_URL]",
       "author": { "name": "Redis" },
       "category": "development"
     },
     {
       "name": "sqlite",
       "source": "./sqlite",
-      "description": "SQLite 轻量数据库读写和管理（项目级安装）",
+      "description": "SQLite 轻量数据库读写和管理（项目级安装） [需要环境变量: SQLITE_DB_PATH]",
       "author": { "name": "SQLite" },
       "category": "development"
     },
     {
       "name": "filesystem",
       "source": "./filesystem",
-      "description": "限定目录内的文件读写遍历操作（项目级安装）",
+      "description": "限定目录内的文件读写遍历操作（项目级安装） [需要环境变量: FILESYSTEM_ALLOWED_DIR]",
       "author": { "name": "Anthropic" },
       "category": "development"
     },

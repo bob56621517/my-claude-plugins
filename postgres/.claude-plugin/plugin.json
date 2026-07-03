@@ -1,5 +1,5 @@
 {
   "name": "postgres",
-  "description": "PostgreSQL 数据库 MCP，支持读写、表结构和 Schema 查询（项目级安装）",
+  "description": "PostgreSQL 数据库 MCP，支持读写、表结构和 Schema 查询（项目级安装） [需要环境变量: POSTGRES_DB_URL]",
   "author": { "name": "PostgreSQL" }
 }

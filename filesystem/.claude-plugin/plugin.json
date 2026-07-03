@@ -1,5 +1,5 @@
 {
   "name": "filesystem",
-  "description": "文件系统 MCP，支持限定目录内的文件读写遍历操作（项目级安装）",
+  "description": "文件系统 MCP，支持限定目录内的文件读写遍历操作（项目级安装） [需要环境变量: FILESYSTEM_ALLOWED_DIR]",
   "author": { "name": "Anthropic" }
 }
