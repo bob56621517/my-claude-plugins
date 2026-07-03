@@ -78,7 +78,7 @@
     {
       "name": "github",
       "source": "./github",
-      "description": "GitHub 仓库/PR/Issue/代码搜索/Release 全管理 [需要环境变量: GITHUB_PERSONAL_ACCESS_TOKEN]",
+      "description": "GitHub 仓库/PR/Issue/代码搜索/Release 全管理（远程 HTTP，通过 Authorization header 传入 Token）",
       "author": { "name": "GitHub" },
       "category": "development"
     },
