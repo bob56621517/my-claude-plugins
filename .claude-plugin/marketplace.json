@@ -1,0 +1,163 @@
+{
+  "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
+  "name": "my-claude-plugins",
+  "description": "bob56621517 的个人 Claude Code 插件市场 - 聚合常用 MCP 工具与偏好配置",
+  "owner": {
+    "name": "bob56621517",
+    "email": "bob56621517@gmail.com"
+  },
+  "metadata": {
+    "description": "个人常用 MCP 工具集合与环境偏好，支持一键安装",
+    "version": "1.0.0",
+    "pluginRoot": "."
+  },
+  "plugins": [
+    {
+      "name": "bocha-search",
+      "source": "./bocha-search",
+      "description": "中文搜索引擎，支持网页搜索和 AI 语义结构化卡片查询",
+      "author": { "name": "博查搜索" },
+      "category": "productivity"
+    },
+    {
+      "name": "wikidata",
+      "source": "./wikidata",
+      "description": "Wikidata 知识图谱查询，支持实体搜索、语句验证和 SPARQL 查询",
+      "author": { "name": "WMCloud" },
+      "category": "productivity"
+    },
+    {
+      "name": "markitdown",
+      "source": "./markitdown",
+      "description": "将 PDF/Word/Excel/PPT 等文档转换为 Markdown 格式",
+      "author": { "name": "Microsoft" },
+      "category": "productivity"
+    },
+    {
+      "name": "markdown-formatter",
+      "source": "./markdown-formatter",
+      "description": "Markdown 与 22 种格式（HTML/PDF/DOCX/LaTeX/Jira 等）互转、修复与 lint",
+      "author": { "name": "@xjtlumedia" },
+      "category": "productivity"
+    },
+    {
+      "name": "image-optimizer",
+      "source": "./image-optimizer",
+      "description": "图片压缩、裁剪、水印、智能裁剪、Favicon 生成和占位图创建",
+      "author": { "name": "mcp-image-optimizer" },
+      "category": "productivity"
+    },
+    {
+      "name": "sequential-thinking",
+      "source": "./sequential-thinking",
+      "description": "多步结构化推理工具，支持问题分解、回溯修正和分支思考",
+      "author": { "name": "Anthropic" },
+      "category": "development"
+    },
+    {
+      "name": "ast-grep",
+      "source": "./ast-grep",
+      "description": "基于 AST 的代码结构化搜索与替换，支持 26 种编程语言",
+      "author": { "name": "ast-grep" },
+      "category": "development"
+    },
+    {
+      "name": "gitlab",
+      "source": "./gitlab",
+      "description": "GitLab 仓库/Issue/MR/分支/CI Pipeline 全管理，支持自托管实例",
+      "author": { "name": "GitLab" },
+      "category": "development"
+    },
+    {
+      "name": "gitee",
+      "source": "./gitee",
+      "description": "Gitee 仓库/Issue/PR/通知/Release 全管理，支持个人/组织/企业",
+      "author": { "name": "Gitee" },
+      "category": "development"
+    },
+    {
+      "name": "github",
+      "source": "./github",
+      "description": "GitHub 仓库/PR/Issue/代码搜索/Release 全管理",
+      "author": { "name": "GitHub" },
+      "category": "development"
+    },
+    {
+      "name": "context7",
+      "source": "./context7",
+      "description": "最新开源库/SDK 官方文档实时查询，获取版本特定的文档和代码示例",
+      "author": { "name": "Upstash" },
+      "category": "development"
+    },
+    {
+      "name": "grep-app",
+      "source": "./grep-app",
+      "description": "跨数百万开源仓库的全文代码搜索",
+      "author": { "name": "grep.app" },
+      "category": "development"
+    },
+    {
+      "name": "fetch",
+      "source": "./fetch",
+      "description": "HTTP 请求工具，用于调试 REST API 和获取网络资源",
+      "author": { "name": "Anthropic" },
+      "category": "development"
+    },
+    {
+      "name": "playwright",
+      "source": "./playwright",
+      "description": "无头浏览器自动化，支持网页截图、E2E 测试和 SPA 交互",
+      "author": { "name": "Microsoft" },
+      "category": "development"
+    },
+    {
+      "name": "docker",
+      "source": "./docker",
+      "description": "Docker 容器/镜像/Compose 管理",
+      "author": { "name": "Docker" },
+      "category": "development"
+    },
+    {
+      "name": "postgres",
+      "source": "./postgres",
+      "description": "PostgreSQL 数据库读写、表结构和 Schema 查询（项目级安装）",
+      "author": { "name": "PostgreSQL" },
+      "category": "development"
+    },
+    {
+      "name": "redis",
+      "source": "./redis",
+      "description": "Redis 缓存读写和 Key 扫描（项目级安装）",
+      "author": { "name": "Redis" },
+      "category": "development"
+    },
+    {
+      "name": "sqlite",
+      "source": "./sqlite",
+      "description": "SQLite 轻量数据库读写和管理（项目级安装）",
+      "author": { "name": "SQLite" },
+      "category": "development"
+    },
+    {
+      "name": "filesystem",
+      "source": "./filesystem",
+      "description": "限定目录内的文件读写遍历操作（项目级安装）",
+      "author": { "name": "Anthropic" },
+      "category": "development"
+    },
+    {
+      "name": "server-memory",
+      "source": "./server-memory",
+      "description": "知识图谱持久化记忆，跨会话记住用户偏好信息",
+      "author": { "name": "Anthropic" },
+      "category": "development"
+    },
+    {
+      "name": "preferences",
+      "source": "./preferences",
+      "description": "bob56621517 的工具链偏好设置，指定各生态系统默认使用工具",
+      "author": { "name": "bob56621517" },
+      "category": "productivity"
+    }
+  ]
+}

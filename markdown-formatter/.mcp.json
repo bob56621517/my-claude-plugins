@@ -1,0 +1,6 @@
+{
+  "markdown-formatter": {
+    "command": "bunx",
+    "args": ["@xjtlumedia/markdown-mcp-server"]
+  }
+}

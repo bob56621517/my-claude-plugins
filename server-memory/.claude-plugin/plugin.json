@@ -1,0 +1,5 @@
+{
+  "name": "server-memory",
+  "description": "知识图谱持久化记忆 MCP，支持跨会话记住用户偏好信息",
+  "author": { "name": "Anthropic" }
+}

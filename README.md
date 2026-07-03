@@ -1,2 +1,115 @@
 # my-claude-plugins
-Help with the rapid configuration of the project cc environment,everthing in cc plugin
+
+bob56621517 的个人 Claude Code 插件市场。聚合常用 MCP 工具与偏好配置，支持一键安装。
+
+## 添加市场
+
+```bash
+/plugin marketplace add https://github.com/bob56621517/my-claude-plugins
+```
+
+或通过项目级配置在 `settings.json` 中添加：
+
+```json
+"extraKnownMarketplaces": {
+  "my-claude-plugins": {
+    "source": {
+      "source": "github",
+      "repo": "bob56621517/my-claude-plugins"
+    }
+  }
+}
+```
+
+## 可用插件
+
+### 搜索与知识
+
+| 插件 | 安装命令 | 功能 |
+|------|---------|------|
+| bocha-search | `/plugin install bocha-search@my-claude-plugins` | 中文搜索引擎，支持网页搜索和 AI 语义结构化卡片查询 |
+| wikidata | `/plugin install wikidata@my-claude-plugins` | Wikidata 知识图谱查询，支持实体搜索、语句验证和 SPARQL |
+| context7 | `/plugin install context7@my-claude-plugins` | 最新开源库/SDK 官方文档实时查询 |
+| grep-app | `/plugin install grep-app@my-claude-plugins` | 跨数百万开源仓库的全文代码搜索 |
+
+### 文档与媒体
+
+| 插件 | 安装命令 | 功能 |
+|------|---------|------|
+| markitdown | `/plugin install markitdown@my-claude-plugins` | PDF/Word/Excel/PPT 转 Markdown |
+| markdown-formatter | `/plugin install markdown-formatter@my-claude-plugins` | Markdown ↔ 22 种格式互转、修复与 lint |
+| image-optimizer | `/plugin install image-optimizer@my-claude-plugins` | 图片压缩/裁剪/水印/智能裁剪/Favicon 生成 |
+
+### 开发与 Git
+
+| 插件 | 安装命令 | 功能 |
+|------|---------|------|
+| github | `/plugin install github@my-claude-plugins` | GitHub 仓库/PR/Issue/代码搜索/Release 全管理 |
+| gitlab | `/plugin install gitlab@my-claude-plugins` | GitLab 仓库/Issue/MR/分支/CI Pipeline 全管理 |
+| gitee | `/plugin install gitee@my-claude-plugins` | Gitee 仓库/Issue/PR/通知/Release 全管理 |
+| ast-grep | `/plugin install ast-grep@my-claude-plugins` | AST 结构化代码搜索与替换，支持 26 种语言 |
+| docker | `/plugin install docker@my-claude-plugins` | Docker 容器/镜像/Compose 管理 |
+
+### 交互与工具
+
+| 插件 | 安装命令 | 功能 |
+|------|---------|------|
+| fetch | `/plugin install fetch@my-claude-plugins` | HTTP 请求调试 REST API |
+| playwright | `/plugin install playwright@my-claude-plugins` | 无头浏览器截图/E2E/SPA 交互 |
+| sequential-thinking | `/plugin install sequential-thinking@my-claude-plugins` | 多步结构化推理，可修正回溯 |
+
+### 项目级数据库与存储
+
+| 插件 | 安装命令 | 功能 |
+|------|---------|------|
+| postgres | `/plugin install postgres@my-claude-plugins` | PostgreSQL 数据库读写和 Schema 查询 |
+| redis | `/plugin install redis@my-claude-plugins` | Redis 缓存读写和 Key 扫描 |
+| sqlite | `/plugin install sqlite@my-claude-plugins` | SQLite 轻量数据库读写 |
+| filesystem | `/plugin install filesystem@my-claude-plugins` | 限定目录文件读写遍历 |
+| server-memory | `/plugin install server-memory@my-claude-plugins` | 知识图谱持久化跨会话记忆 |
+
+### 工具偏好
+
+| 插件 | 安装命令 | 功能 |
+|------|---------|------|
+| preferences | `/plugin install preferences@my-claude-plugins` | 工具链偏好设置（uvx/bun/mvn/gh/glab） |
+
+## 环境变量
+
+以下环境变量需要根据实际配置设置：
+
+| 变量 | 用途 | 所属插件 |
+|------|------|---------|
+| `BOCHA_API_KEY` | 博查搜索 API Key | bocha-search |
+| `GITHUB_PERSONAL_ACCESS_TOKEN` | GitHub 个人访问令牌 | github |
+| `GITLAB_PERSONAL_ACCESS_TOKEN` | GitLab 个人访问令牌 | gitlab |
+| `GITLAB_API_URL` | GitLab 自托管实例地址 | gitlab |
+| `GITEE_ACCESS_TOKEN` | Gitee 个人访问令牌 | gitee |
+| `POSTGRES_DB_URL` | PostgreSQL 数据库连接 URL | postgres |
+| `REDIS_URL` | Redis 连接 URL | redis |
+| `SQLITE_DB_PATH` | SQLite 数据库文件路径 | sqlite |
+| `FILESYSTEM_ALLOWED_DIR` | 文件系统允许访问的目录 | filesystem |
+
+## 安装示例
+
+添加市场后一键安装常用工具：
+
+```bash
+# 搜索相关
+/plugin install bocha-search@my-claude-plugins
+/plugin install context7@my-claude-plugins
+
+# 文档相关
+/plugin install markitdown@my-claude-plugins
+/plugin install markdown-formatter@my-claude-plugins
+
+# 开发相关（按需选择 git 工具）
+/plugin install github@my-claude-plugins
+/plugin install ast-grep@my-claude-plugins
+
+# 工具偏好
+/plugin install preferences@my-claude-plugins
+
+# 验证安装
+/plugin list
+```

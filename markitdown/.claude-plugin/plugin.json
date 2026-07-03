@@ -1,0 +1,5 @@
+{
+  "name": "markitdown",
+  "description": "文档转换 MCP，将 PDF/Word/Excel/PPT 等格式转换为 Markdown",
+  "author": { "name": "Microsoft" }
+}

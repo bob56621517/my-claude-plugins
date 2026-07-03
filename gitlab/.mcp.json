@@ -1,0 +1,10 @@
+{
+  "gitlab": {
+    "command": "bunx",
+    "args": ["gitlab-mcp"],
+    "env": {
+      "GITLAB_API_URL": "${GITLAB_API_URL}",
+      "GITLAB_PERSONAL_ACCESS_TOKEN": "${GITLAB_PERSONAL_ACCESS_TOKEN}"
+    }
+  }
+}

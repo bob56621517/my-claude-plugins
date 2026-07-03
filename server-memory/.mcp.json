@@ -1,0 +1,6 @@
+{
+  "server-memory": {
+    "command": "bunx",
+    "args": ["@modelcontextprotocol/server-memory"]
+  }
+}

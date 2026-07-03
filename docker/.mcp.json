@@ -1,0 +1,6 @@
+{
+  "docker": {
+    "command": "uvx",
+    "args": ["mcp-docker"]
+  }
+}

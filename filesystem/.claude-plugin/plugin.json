@@ -1,0 +1,5 @@
+{
+  "name": "filesystem",
+  "description": "文件系统 MCP，支持限定目录内的文件读写遍历操作（项目级安装）",
+  "author": { "name": "Anthropic" }
+}

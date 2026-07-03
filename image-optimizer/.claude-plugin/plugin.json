@@ -1,0 +1,5 @@
+{
+  "name": "image-optimizer",
+  "description": "图片处理 MCP，支持压缩/裁剪/水印/智能裁剪/Favicon 生成",
+  "author": { "name": "mcp-image-optimizer" }
+}

@@ -1,0 +1,5 @@
+{
+  "name": "markdown-formatter",
+  "description": "Markdown 格式处理 MCP，支持 22 种格式互转、修复和 lint",
+  "author": { "name": "@xjtlumedia" }
+}

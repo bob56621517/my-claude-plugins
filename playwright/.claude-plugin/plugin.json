@@ -1,0 +1,5 @@
+{
+  "name": "playwright",
+  "description": "无头浏览器自动化 MCP，支持截图、E2E 测试和 SPA 交互",
+  "author": { "name": "Microsoft" }
+}

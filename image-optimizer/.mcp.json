@@ -1,0 +1,6 @@
+{
+  "image-optimizer": {
+    "command": "bunx",
+    "args": ["mcp-image-optimizer"]
+  }
+}

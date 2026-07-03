@@ -1,0 +1,5 @@
+{
+  "name": "docker",
+  "description": "Docker 容器/镜像/Compose 管理 MCP",
+  "author": { "name": "Docker" }
+}

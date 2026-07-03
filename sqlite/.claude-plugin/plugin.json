@@ -1,0 +1,5 @@
+{
+  "name": "sqlite",
+  "description": "SQLite 轻量数据库 MCP，支持读写和管理（项目级安装）",
+  "author": { "name": "SQLite" }
+}

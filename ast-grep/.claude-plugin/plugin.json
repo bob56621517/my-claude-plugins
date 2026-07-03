@@ -1,0 +1,5 @@
+{
+  "name": "ast-grep",
+  "description": "AST 结构化代码搜索与替换 MCP，支持 26 种编程语言",
+  "author": { "name": "ast-grep" }
+}

@@ -1,0 +1,5 @@
+{
+  "name": "sequential-thinking",
+  "description": "多步结构化推理 MCP，支持问题分解、回溯修正和分支思考",
+  "author": { "name": "Anthropic" }
+}

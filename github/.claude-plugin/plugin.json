@@ -1,0 +1,5 @@
+{
+  "name": "github",
+  "description": "GitHub MCP，支持仓库/PR/Issue/代码搜索/Release 全管理",
+  "author": { "name": "GitHub" }
+}

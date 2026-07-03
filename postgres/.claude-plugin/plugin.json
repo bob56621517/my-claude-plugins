@@ -1,0 +1,5 @@
+{
+  "name": "postgres",
+  "description": "PostgreSQL 数据库 MCP，支持读写、表结构和 Schema 查询（项目级安装）",
+  "author": { "name": "PostgreSQL" }
+}

@@ -1,0 +1,6 @@
+{
+  "playwright": {
+    "command": "bunx",
+    "args": ["@playwright/mcp"]
+  }
+}

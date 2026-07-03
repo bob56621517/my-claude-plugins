@@ -1,0 +1,6 @@
+{
+  "ast-grep": {
+    "command": "bunx",
+    "args": ["@chousyn/ast-grep-mcp"]
+  }
+}

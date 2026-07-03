@@ -1,0 +1,5 @@
+{
+  "name": "grep-app",
+  "description": "跨数百万开源仓库的全文代码搜索 MCP",
+  "author": { "name": "grep.app" }
+}

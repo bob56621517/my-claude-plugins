@@ -1,0 +1,5 @@
+{
+  "name": "fetch",
+  "description": "HTTP 请求 MCP，用于调试 REST API 和获取网络资源",
+  "author": { "name": "Anthropic" }
+}
