@@ -122,35 +122,87 @@ m.plugins.forEach(p => {
 
 以 Markdown 表格输出结果。
 
-### Step 2：L1 — 隔离环境测试
+### Step 2：L1 — 隔离环境混合验证
 
 对每个有 `.mcp.json` 的插件执行。**跳过**用户在 Step 0 中跳过（因缺 env）的插件。
+
+#### 2a. 准备隔离环境
 
 ```bash
 TMPDIR=$(mktemp -d)
 cd "$TMPDIR"
 
-# 添加市场并安装
-claude plugin marketplace add "https://github.com/bob56621517/my-claude-plugins" --scope project
-claude plugin install "${PLUGIN_NAME}@my-claude-plugins" --scope project
+# 从本地项目路径添加市场（而非远程 URL），确保测试的是本地最新代码
+# --scope project 在隔离目录的项目级别注册，不与用户全局配置冲突
+claude plugin marketplace add "$PROJECT_ROOT" --scope project
+```
 
-# 验证是否能加载
-claude mcp get "$PLUGIN_NAME" 2>&1
+#### 2b. 批量安装待测插件
 
+将所有目标插件一次性安装：
+
+```bash
+for PLUGIN_NAME in plugin1 plugin2 plugin3; do
+  claude plugin install "${PLUGIN_NAME}@my-claude-plugins" --scope project
+done
+```
+
+#### 2c. 传输模式检查（精确）
+
+`claude mcp list` 输出是机器格式，精确显示每个 MCP 的启动命令/URL，不依赖 LLM 判断：
+
+```bash
+claude mcp list 2>&1
+# 示例输出：
+#   plugin:gitee:gitee: bunx -y @gitee/mcp-gitee@latest - ✔ Connected   → stdio
+#   plugin:github:github: https://api.githubcopilot.com/mcp/ - ✔ Connected → http
+```
+
+从此输出提取每个插件的传输模式（`bunx`/`uvx`/`npx`/`node` = stdio，`https://` = HTTP 远程）。
+
+#### 2d. 功能调用测试（核心）
+
+传输模式正确 ≠ 功能正常。启动独立 Claude 子进程，**实际调用**每个插件的 MCP 工具来验证功能。
+
+**关键约束**：
+- `--allowedTools` 不接受纯通配符，必须是 `mcp__<server>__*` 格式
+- `--allowedTools` 是变长参数，会吞掉后续参数 → **用 stdin 传 prompt**，不要用命令行参数
+
+```bash
+# 对每个插件逐个测试：
+# 1. 构造 allowedTools 模式（格式: mcp__plugin_{name}_{name}__*）
+ALLOW_PATTERN="mcp__plugin_${PLUGIN_NAME}_${PLUGIN_NAME}__*"
+
+# 2. 通过 stdin 传入测试 prompt（避免被 --allowedTools 吞掉）
+TEST_MODEL="${TEST_MODEL:-haiku}"
+printf '你是 MCP 插件测试员。测试 %s MCP 插件：调用最基础的只读操作（如 get/list/search），验证返回数据合理。只输出一行结论：✅/❌ + 调用的工具名 + 返回数据摘要' "$PLUGIN_NAME" \
+  | ENV_VAR="$ENV_VAR" claude --model "$TEST_MODEL" --print --allowedTools "$ALLOW_PATTERN" 2>&1
+```
+
+**判断标准**：
+- `install` 命令无错误退出 → 安装阶段 ✅
+- `mcp list` 显示正确的传输模式（stdio 插件应显示 `bunx`/`uvx`/`npx`）→ 传输模式 ✅
+- agent 返回 ✅ 且工具调用成功 → 功能正常 ✅
+- agent 报错或工具调用失败 → ❌，需检查插件配置
+
+#### 2e. 清理
+
+```bash
 cd "$PROJECT_ROOT"
 rm -rf "$TMPDIR"
 ```
 
-**判断标准**：
-- `install` 命令无错误退出 → ✅
-- `claude mcp get` 返回连接信息 → ✅
-- 出错 → ❌
+**模型选择**：
+- 默认 `haiku`（轻量、快速、低成本，适合批量验证）
+- 可通过环境变量 `TEST_MODEL` 覆盖：`TEST_MODEL=sonnet` 强制用更细致的模型
 
 **注意**：
 - skill 插件（如 preferences）无 `.mcp.json`，标记 N/A
-- 缺 env 的插件在本地安装步骤本身可以验证，但握手阶段会失败——按用户选择处理
-
-**进度反馈**：每完成一个插件打印一行（如 `[1/5] bocha-search ✅`）。
+- 缺 env 的插件在安装阶段就会失败——按用户选择处理
+- 传输模式以 `claude mcp list` 输出为准（机器输出），agent 对模式的判断仅供参考
+- agent 测试输出作为报告依据，关键信息需提取到 Step 3 汇总表中
+- 若 agent 因某些原因未能完成测试（如 --allowedTools 格式错误、权限被拒绝），标注为 ⚠️ 并附原因
+- **`--allowedTools` 与 prompt 的位置关系**：由于 `--allowedTools` 是变长参数，prompt 必须通过 stdin 传入，否则会被当作工具名消费
 
 ### Step 3：汇总报告
 
@@ -165,10 +217,11 @@ rm -rf "$TMPDIR"
 | marketplace ↔ 目录 | ✅ 全部匹配 | ... |
 | README 一致性 | ✅ / ⚠️ | ... |
 
-### L1 隔离安装
-| 插件 | Env | 结果 | 说明 |
-|------|-----|------|------|
-| bocha-search | 已注入 | ✅ | - |
-| github | ⏭️ 跳过 | - | env 未提供 |
-| context7 | - | ✅ | HTTP 远程 |
-| preferences | - | N/A | skill 插件 |
+### L1 隔离动态测试
+| 插件 | Env | 结果 | 工具数 | 测试操作 | 备注 |
+|------|-----|------|--------|---------|------|
+| bocha-search | 已注入 | ✅ | 2 | bocha_web_search | - |
+| github | 已注入 | ✅ | 30+ | search_repositories | - |
+| gitee | 已注入 | ❌ | 0 | — | 远程 HTTP 而非期望的 stdio |
+| context7 | - | ✅ | 2 | resolve-library-id | HTTP 远程 |
+| preferences | - | N/A | - | - | skill 插件 |
