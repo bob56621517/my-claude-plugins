@@ -72,4 +72,5 @@ m.plugins.forEach(p => {
 - 插件名（`plugin.json` 的 `name`）必须与目录名一致
 - `marketplace.json` 的 `source` 格式为 `./{plugin-name}`
 - 新增插件必须在 `marketplace.json` 注册，并在 `README.md` 添加表格行
+- 远程 HTTP MCP 插件在上架前, 必须验证服务端实现了 Streamable HTTP 传输（SSE + Mcp-Session-Id）, 仅支持纯 JSON-RPC 的端点不可用
 

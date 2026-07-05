@@ -1,9 +1,9 @@
 {
   "gitee": {
-    "type": "http",
-    "url": "https://api.gitee.com/mcp",
-    "headers": {
-      "Authorization": "Bearer ${GITEE_ACCESS_TOKEN}"
+    "command": "bunx",
+    "args": ["-y", "@gitee/mcp-gitee@latest"],
+    "env": {
+      "GITEE_ACCESS_TOKEN": "${GITEE_ACCESS_TOKEN}"
     }
   }
 }
