@@ -1,0 +1,5 @@
+{
+  "name": "unified-search",
+  "description": "统一搜索路由技能——根据查询类型自动选择最佳搜索后端（Context7/Wikidata/博查/原生搜索），不做结果加工",
+  "author": { "name": "bob56621517" }
+}
