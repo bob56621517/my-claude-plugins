@@ -1,0 +1,8 @@
+{
+  "name": "claude-md-management-cn",
+  "description": "CLAUDE.md 文件维护与改进工具——质量审计、捕获会话经验、保持项目记忆最新。官方 claude-md-management 的中文翻译版。",
+  "version": "1.0.0",
+  "author": {
+    "name": "bob56621517"
+  }
+}
