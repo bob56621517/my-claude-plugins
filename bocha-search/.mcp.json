@@ -1,9 +1,0 @@
-{
-  "bocha-search": {
-    "command": "uvx",
-    "args": ["mcp-bocha-search"],
-    "env": {
-      "BOCHA_API_KEY": "${BOCHA_API_KEY}"
-    }
-  }
-}

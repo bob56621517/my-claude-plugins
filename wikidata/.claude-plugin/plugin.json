@@ -1,5 +1,0 @@
-{
-  "name": "wikidata",
-  "description": "Wikidata 知识图谱 MCP，支持实体搜索、语句验证和 SPARQL 查询",
-  "author": { "name": "WMCloud" }
-}
