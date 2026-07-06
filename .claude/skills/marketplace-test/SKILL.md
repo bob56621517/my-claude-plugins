@@ -196,6 +196,12 @@ rm -rf "$TMPDIR"
 - 默认 `haiku`（轻量、快速、低成本，适合批量验证）
 - 可通过环境变量 `TEST_MODEL` 覆盖：`TEST_MODEL=sonnet` 强制用更细致的模型
 
+**经验教训（gitee）**：
+- gitee 的远程 HTTP endpoint `https://api.gitee.com/mcp` 可以连接（`✔ Connected`），但实际 API 操作可能失败
+- 因为远程 HTTP MCP 端点对某些功能支持不完整，而本地 stdio 模式（`bunx @gitee/mcp-gitee@latest`）会启动本地 HTTP 代理服务器，处理更完整
+- 测试时的教训：**`claude mcp get` 返回 `✔ Connected` 不代表插件功能正常**，L1 测试后应额外验证工具列表是否可用（如 `claude -p "列出当前可用 MCP 工具"`）
+- 对于同时支持 stdio 和 HTTP 模式的插件，优先使用 stdio 模式，除非已验证 HTTP 端点功能完整性
+
 **注意**：
 - skill 插件（如 preferences）无 `.mcp.json`，标记 N/A
 - 缺 env 的插件在安装阶段就会失败——按用户选择处理
