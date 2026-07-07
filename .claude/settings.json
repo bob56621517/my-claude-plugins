@@ -5,19 +5,5 @@
     "superpowers@claude-plugins-official": true,
     "claude-md-management-cn@my-claude-plugins": true,
     "caveman@claude-community": true
-  },
-  "hooks": {
-    "SessionStart": [
-      {
-        "matcher": "startup|clear",
-        "hooks": [
-          {
-            "type": "command",
-            "command": "bun",
-            "args": [".claude/hooks/session-start-unified-search.ts"]
-          }
-        ]
-      }
-    ]
   }
 }

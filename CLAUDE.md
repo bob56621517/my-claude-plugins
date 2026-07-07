@@ -88,12 +88,16 @@ m.plugins.forEach(p => {
 ├── .claude-plugin/
 │   └── plugin.json               # 元数据（name, description, author）
 ├── .mcp.json                     # MCP 运行配置（纯 MCP 插件；纯 skill 插件无此文件）
+├── hooks/
+│   ├── hooks.json                # Hook 注册配置（插件级，安装后自动生效）
+│   └── *.ts                      # Hook 脚本，bun 执行
 └── skills/{skill-name}/SKILL.md   # Skill 定义（纯 skill 插件；hybrid 插件可同时有 .mcp.json）
 ```
 
 - `.claude-plugin/marketplace.json` — 市场注册清单，核心入口
 - `preferences/skills/tool-preferences/SKILL.md` — 工具偏好 skill（非 MCP）
 - `claude-md-management-cn/` — Hybrid 插件示例（skill + command，无 MCP）
+- `unified-search/` — Hybrid 插件示例（MCP + hooks，捆绑多个 MCP 搜索后端）
 - `README.md` — 安装指南 + 完整插件目录
 
 ## 插件开发规范
@@ -103,6 +107,32 @@ m.plugins.forEach(p => {
 纯 skill 插件也可以包含 `.mcp.json`，捆绑其依赖的 MCP 工具。例如 unified-search 捆绑 context7/wikidata/bocha-search，实现一次安装即用。
 
 捆绑时 MCP 的 server key 需与独立插件的 `.mcp.json` 保持一致，这样 Claude Code v2.1.71+ 的去重机制（比较 URL/command+args）会自动抑制重复配置。
+
+### 插件可声明 Hooks
+
+插件可在 `hooks/hooks.json` 声明 hook，安装后自动注册。路径使用 `${CLAUDE_PLUGIN_ROOT}` 引用插件目录。例如 unified-search 注册 SessionStart hook：
+
+```json
+{
+  "hooks": {
+    "SessionStart": [{
+      "matcher": "startup|clear",
+      "hooks": [{
+        "type": "command",
+        "command": "bun",
+        "args": ["${CLAUDE_PLUGIN_ROOT}/hooks/session-start.ts"]
+      }]
+    }]
+  }
+}
+```
+
+验证 hooks.json 合法性：
+```bash
+for f in */hooks/hooks.json; do
+  [ -f "$f" ] && node -e "JSON.parse(require('fs').readFileSync('$f','utf8'))" && echo "$f OK" || echo "$f FAIL"
+done
+```
 
 ### 删除插件需清理三处
 
