@@ -3,6 +3,21 @@
     "context7@my-claude-plugins": true,
     "skill-creator@claude-plugins-official": true,
     "superpowers@claude-plugins-official": true,
-    "claude-md-management-cn@my-claude-plugins": true
+    "claude-md-management-cn@my-claude-plugins": true,
+    "caveman@claude-community": true
+  },
+  "hooks": {
+    "SessionStart": [
+      {
+        "matcher": "startup|clear",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "bun",
+            "args": [".claude/hooks/session-start-unified-search.ts"]
+          }
+        ]
+      }
+    ]
   }
 }
