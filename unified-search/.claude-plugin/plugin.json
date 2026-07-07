@@ -1,0 +1,5 @@
+{
+  "name": "unified-search",
+  "description": "统一搜索路由——SessionStart hook 全局注入，自动拆分查询→路由→并行执行→单次降级，捆绑 MCP 搜索后端（Context7/Wikidata/博查/GitHub/fetch）",
+  "author": { "name": "bob56621517" }
+}

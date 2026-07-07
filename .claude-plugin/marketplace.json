@@ -165,6 +165,13 @@
       "description": "CLAUDE.md 文件维护与改进工具——质量审计、捕获会话经验、保持项目记忆最新。官方 claude-md-management 的中文翻译版。",
       "author": { "name": "bob56621517" },
       "category": "development"
+    },
+    {
+      "name": "unified-search",
+      "source": "./unified-search",
+      "description": "统一搜索路由——SessionStart hook 全局注入查询原则（拆分→路由→并行→降级）。捆绑 Context7/Wikidata/博查/GitHub/fetch，一次安装即具备完整搜索能力。",
+      "author": { "name": "bob56621517" },
+      "category": "productivity"
     }
   ]
 }
