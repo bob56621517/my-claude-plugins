@@ -21,6 +21,10 @@
       "Authorization": "Bearer ${GITHUB_PERSONAL_ACCESS_TOKEN}"
     }
   },
+  "grep-app": {
+    "type": "http",
+    "url": "https://mcp.grep.app"
+  },
   "fetch": {
     "command": "uvx",
     "args": ["mcp-server-fetch"]

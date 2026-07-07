@@ -13,7 +13,8 @@ const additionalContext = `## 统一查询原则
 
 ### 工具映射
 - 库文档 / API / 版本迁移 → P1: Context7(resolve-library-id→query-docs) → P2: bocha_web_search
-- 代码实现 / 已知缺陷 → P1: GitHub(search_code/search_issues) → P2: bocha_web_search
+- 代码实现(开源示例/实现模式) → P1: grep-app(searchCode→github_file) → P2: GitHub search_code
+- 已知缺陷(bug/issue/错误) → P1: GitHub(search_issues/search_code) → P2: bocha_web_search
 - 知识图谱(实体/属性/关系) → P1: Wikidata(search_items→get_statements→execute_sparql) → P2: bocha_web_search
 - 天气/股票/汇率/新闻 → P1: bocha_ai_search → P2: bocha_web_search
 - 中文网页 / 实时数据 → P1: bocha_web_search → P2: web_search
