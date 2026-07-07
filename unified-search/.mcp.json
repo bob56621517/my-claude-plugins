@@ -13,5 +13,9 @@
     "env": {
       "BOCHA_API_KEY": "${BOCHA_API_KEY}"
     }
+  },
+  "fetch": {
+    "command": "uvx",
+    "args": ["mcp-server-fetch"]
   }
 }
