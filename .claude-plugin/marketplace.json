@@ -13,6 +13,20 @@
   },
   "plugins": [
     {
+      "name": "bocha-search",
+      "source": "./bocha-search",
+      "description": "中文搜索引擎，支持网页搜索和 AI 语义结构化卡片查询 [需要环境变量: BOCHA_API_KEY]",
+      "author": { "name": "博查搜索" },
+      "category": "productivity"
+    },
+    {
+      "name": "wikidata",
+      "source": "./wikidata",
+      "description": "Wikidata 知识图谱查询，支持实体搜索、语句验证和 SPARQL 查询",
+      "author": { "name": "WMCloud" },
+      "category": "productivity"
+    },
+    {
       "name": "markitdown",
       "source": "./markitdown",
       "description": "将 PDF/Word/Excel/PPT 等文档转换为 Markdown 格式",
@@ -66,6 +80,13 @@
       "source": "./github",
       "description": "GitHub 仓库/PR/Issue/代码搜索/Release 全管理（远程 HTTP，通过 Authorization header 传入 Token）",
       "author": { "name": "GitHub" },
+      "category": "development"
+    },
+    {
+      "name": "context7",
+      "source": "./context7",
+      "description": "最新开源库/SDK 官方文档实时查询，获取版本特定的文档和代码示例",
+      "author": { "name": "Upstash" },
       "category": "development"
     },
     {
@@ -151,27 +172,6 @@
       "description": "统一搜索路由——SessionStart hook 全局注入查询原则（拆分→路由→并行→降级）。捆绑 Context7/Wikidata/博查/GitHub/fetch，一次安装即具备完整搜索能力。",
       "author": { "name": "bob56621517" },
       "category": "productivity"
-    },
-    {
-      "name": "bocha-search",
-      "source": "./bocha-search",
-      "description": "中文搜索引擎 MCP，支持网页搜索和 AI 语义结构化卡片查询 [需要环境变量: BOCHA_API_KEY]",
-      "author": { "name": "博查搜索" },
-      "category": "productivity"
-    },
-    {
-      "name": "context7",
-      "source": "./context7",
-      "description": "最新开源库/SDK 官方文档实时查询 MCP，获取版本特定的文档和代码示例",
-      "author": { "name": "Upstash" },
-      "category": "development"
-    },
-    {
-      "name": "wikidata",
-      "source": "./wikidata",
-      "description": "Wikidata 知识图谱 MCP，支持实体搜索、语句验证和 SPARQL 查询",
-      "author": { "name": "WMCloud" },
-      "category": "development"
     }
   ]
 }
