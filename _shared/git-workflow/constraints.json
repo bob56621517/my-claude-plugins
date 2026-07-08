@@ -1,0 +1,6 @@
+{
+  "hookSpecificOutput": {
+    "hookEventName": "SessionStart",
+    "additionalContext": "## Git 工作流约束\n\n本项目为议题驱动开发。遇到涉及 Git 操作的需求时，必须遵循以下流程。\n\n### 0. Git 项目检测\n- 首次交互自动检测 git 状态（`git rev-parse --show-toplevel`）\n- 必须主动提示用户当前是否为 git 项目\n- 用户明确放弃 → 本会话不再提工作流\n- 静默后用户主动提 git 操作 → 重新激活\n\n### A. 议题强制关联\n- 用户提写操作（改/新建/删文件），必须先确认对应议题\n- 读操作（查询、查看、走读）不强制\n- 自动拉取议题列表匹配标题 → 1 个直接确认 / 多个让用户选 / 0 个提示创建\n- 议题已 closed → 自动 reopen（除非标题含\"完成/废弃/不再需要\"）\n\n### B. 新需求\n顺序：议题 → 从 main 创建分支 → 本地切换 → 开发 → 提交 → push → PR/MR\n- 分支命名：`{议题号}-{feature|bugfix}-{简短描述}`（如 `3-feature-unified-search`）\n- 脏工作区（有未提交改动）：询问用户 (a)直接提交当前分支 (b)创建 `temp_<当前分支名>_<datetime>` 临时分支\n- 认证失败再提示（预期插件阶段已配好 token）\n- 任何修改不跳流程\n- PR/MR 在开发完成后创建\n\n### C. 旧议题\n- 分支已存在：提取前缀找议题 → 向用户展示议题标题/摘要 → 用户确认后切换\n- 分支已删：reopen 议题不新建，按新需求流程走\n- 分支名不规范：让用户自己指定\n\n### D. 执行与提交\n- 提交必须有 commit message\n- 需求变更后同步更新议题正文\n- 提交前不跑验证（验证是开发流程的事）\n\n### E. Push 与 PR/MR\n- 触发词精确匹配才 push：`push`、`推送`、`项目完成`（不语义推断）\n- 仅首次推送提醒 PR/MR URL\n- force push 禁止执行，若用户明确要求则提示用 `! git push --force`\n- 合并仅用户手动（被视为高危操作）\n- 合并后分支删除不管\n- `!` 前缀适用场景：force push、reset hard、分支删除"
+  }
+}
