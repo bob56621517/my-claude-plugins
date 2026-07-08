@@ -21,7 +21,8 @@ const additionalContext = `## 统一查询原则
 - 版本变更历史 → P1: GitHub search_commits → P2: bocha_web_search
 
 ### 约束
-- 不总结、不调 WebFetch
+- 不总结
+- URL / 网页内容抓取 → P1: mcp-server-fetch → P2: WebFetch（前者仅检查 robots.txt，无中心化域名白名单限制；后者受域名安全校验限制常失败）
 - Wikidata 必须走 search→validate→SPARQL，不跳步
 - bocha_ai_search 只对垂直领域（天气/新闻/股票/汇率）
 - 不假设 MCP 必存——P1 工具不存在就降级 P2`;
