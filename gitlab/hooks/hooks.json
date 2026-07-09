@@ -6,8 +6,8 @@
         "hooks": [
           {
             "type": "command",
-            "command": "cat",
-            "args": ["${CLAUDE_PLUGIN_ROOT}/../../_shared/git-workflow/constraints.json"]
+            "command": "bun",
+            "args": ["${CLAUDE_PLUGIN_ROOT}/hooks/session-start.ts"]
           }
         ]
       }
