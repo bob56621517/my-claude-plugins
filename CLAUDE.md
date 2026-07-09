@@ -6,26 +6,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 个人 Claude Code 插件市场仓库。每个 MCP 工具独立为一个插件目录，平铺结构。
 
-## 开发工作流
 
-本项目采用 **议题驱动开发** 模式，所有插件变更必须遵循以下流程：
-
-```
-需求收集 → 创建议题 → 创建分支 → 开发 → PR → 合并到 main
-```
-
-### 议题规范
-
-- **新插件**：议题标题格式 `feature-xxx`
-- **修改/修复**：议题标题格式 `bugfix-xxx`
-- 收集的需求直接写入议题内容
-- 如果有实现计划，附加在议题内容中另起章节
-- 使用 GitHub Issues 管理，不保留本地 TODO
-
-### 分支规范
-
-- 基于议题创建分支：`feature-xxx` 或 `bugfix-xxx`
-- 开发完成后提交、推送、创建 PR 合并到 main
 
 ## 添加新插件
 
