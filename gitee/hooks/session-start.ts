@@ -1,6 +1,9 @@
 // SessionStart hook — Git 工作流约束
 // matcher: startup|clear (resume/compact 不注入)
 // Gitee 平台：任务/PR
+//
+// ⚠️ 此文件与 github/hooks/session-start.ts、gitlab/hooks/session-start.ts 内容同步
+// 三份文件除本行外完全一致。修改时务必三方同步更新。
 const additionalContext = `## Git 工作流约束
 
 本项目为议题驱动开发。遇到涉及 Git 操作的需求时，必须遵循以下流程。
