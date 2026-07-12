@@ -3,7 +3,7 @@
     "command": "uvx",
     "args": ["mcp-bocha-search"],
     "env": {
-      "BOCHA_API_KEY": "${BOCHA_API_KEY}"
+      "BOCHA_API_KEY": "${user_config.bocha_api_key}"
     }
   }
 }

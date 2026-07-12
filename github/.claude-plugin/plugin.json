@@ -1,5 +1,6 @@
 {
   "name": "github",
   "description": "GitHub MCP，支持仓库/PR/Issue/代码搜索/Release 全管理 [需要环境变量: GITHUB_PERSONAL_ACCESS_TOKEN]",
-  "author": { "name": "GitHub" }
+  "author": { "name": "GitHub" },
+  "dependencies": ["git-context-prep"]
 }

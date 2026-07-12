@@ -1,6 +1,6 @@
 {
   "filesystem": {
     "command": "bunx",
-    "args": ["@modelcontextprotocol/server-filesystem", "${FILESYSTEM_ALLOWED_DIR}"]
+    "args": ["@modelcontextprotocol/server-filesystem", "${user_config.allowed_dir}"]
   }
 }

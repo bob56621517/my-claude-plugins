@@ -1,6 +1,6 @@
 {
   "postgres": {
     "command": "uvx",
-    "args": ["mcp-server-postgres", "--db-url", "${POSTGRES_DB_URL}"]
+    "args": ["mcp-server-postgres", "--db-url", "${user_config.db_url}"]
   }
 }

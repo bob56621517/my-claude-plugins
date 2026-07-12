@@ -1,5 +1,13 @@
 {
   "name": "redis",
-  "description": "Redis 缓存 MCP，支持读写和 Key 扫描（项目级安装） [需要环境变量: REDIS_URL]",
-  "author": { "name": "Redis" }
+  "description": "Redis 缓存 MCP，支持读写和 Key 扫描（项目级安装）",
+  "author": { "name": "Redis" },
+  "userConfig": {
+    "url": {
+      "type": "string",
+      "title": "Redis 连接 URL",
+      "description": "Redis 连接字符串（REDIS_URL，如 redis://localhost:6379）",
+      "required": true
+    }
+  }
 }

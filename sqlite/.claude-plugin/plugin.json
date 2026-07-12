@@ -1,5 +1,13 @@
 {
   "name": "sqlite",
-  "description": "SQLite 轻量数据库 MCP，支持读写和管理（项目级安装） [需要环境变量: SQLITE_DB_PATH]",
-  "author": { "name": "SQLite" }
+  "description": "SQLite 轻量数据库 MCP，支持读写和管理（项目级安装）",
+  "author": { "name": "SQLite" },
+  "userConfig": {
+    "db_path": {
+      "type": "string",
+      "title": "SQLite 数据库路径",
+      "description": "SQLite 数据库文件路径（SQLITE_DB_PATH，如 /path/to/database.db）",
+      "required": true
+    }
+  }
 }
