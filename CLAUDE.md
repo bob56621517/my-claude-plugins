@@ -75,9 +75,7 @@ m.plugins.forEach(p => {
 └── skills/{skill-name}/SKILL.md   # Skill 定义（纯 skill 插件；hybrid 插件可同时有 .mcp.json）
 ```
 
-- `.claude/skills/git-workflow/` — Git 工作流约束 skill（源，开发时用）
-- `*/skills/git-workflow/` — 三平台插件各自携带 git-workflow skill（Actions 自动同步）
-- `.github/workflows/sync-git-workflow-skill.yml` — 源变更时自动同步到三平台
+- `git-context-prep/` — Git 上下文准备 Skill 插件（独立分发，无 MCP 依赖）
 - `.claude-plugin/marketplace.json` — 市场注册清单，核心入口
 - `preferences/skills/tool-preferences/SKILL.md` — 工具偏好 skill（非 MCP）
 - `claude-md-management-cn/` — Hybrid 插件示例（skill + command，无 MCP）
