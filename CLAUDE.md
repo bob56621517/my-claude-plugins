@@ -75,6 +75,7 @@ m.plugins.forEach(p => {
 └── skills/{skill-name}/SKILL.md   # Skill 定义（纯 skill 插件；hybrid 插件可同时有 .mcp.json）
 ```
 
+- `git-context-prep/` — Git 上下文准备 Skill 插件（独立分发，无 MCP 依赖）
 - `.claude-plugin/marketplace.json` — 市场注册清单，核心入口
 - `preferences/skills/tool-preferences/SKILL.md` — 工具偏好 skill（非 MCP）
 - `claude-md-management-cn/` — Hybrid 插件示例（skill + command，无 MCP）
