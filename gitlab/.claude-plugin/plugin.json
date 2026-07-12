@@ -8,7 +8,6 @@
       "type": "string",
       "title": "GitLab Personal Access Token",
       "description": "GitLab 个人访问令牌（GITLAB_PERSONAL_ACCESS_TOKEN）",
-      "sensitive": true,
       "required": true
     },
     "api_url": {

@@ -7,7 +7,6 @@
       "type": "string",
       "title": "PostgreSQL 连接 URL",
       "description": "PostgreSQL 数据库连接字符串（POSTGRES_DB_URL，如 postgresql://user:pass@localhost:5432/db）",
-      "sensitive": true,
       "required": true
     }
   }

@@ -8,7 +8,6 @@
       "type": "string",
       "title": "Gitee Access Token",
       "description": "Gitee 访问令牌（GITEE_ACCESS_TOKEN）",
-      "sensitive": true,
       "required": true
     }
   }

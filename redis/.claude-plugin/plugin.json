@@ -7,7 +7,6 @@
       "type": "string",
       "title": "Redis 连接 URL",
       "description": "Redis 连接字符串（REDIS_URL，如 redis://localhost:6379）",
-      "sensitive": true,
       "required": true
     }
   }

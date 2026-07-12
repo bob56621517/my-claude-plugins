@@ -14,7 +14,6 @@
       "type": "string",
       "title": "博查搜索 API Key",
       "description": "Bocha Search API 密钥（BOCHA_API_KEY）",
-      "sensitive": true,
       "required": true
     }
   }
