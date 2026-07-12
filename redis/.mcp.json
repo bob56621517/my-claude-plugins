@@ -1,6 +1,6 @@
 {
   "redis": {
     "command": "uvx",
-    "args": ["mcp-server-redis", "--url", "${REDIS_URL}"]
+    "args": ["mcp-server-redis", "--url", "${user_config.url}"]
   }
 }

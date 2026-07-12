@@ -1,5 +1,21 @@
 {
   "name": "gitlab",
-  "description": "GitLab MCP，支持仓库/Issue/MR/分支/CI Pipeline 全管理，支持自托管实例 [需要环境变量: GITLAB_PERSONAL_ACCESS_TOKEN, GITLAB_API_URL]",
-  "author": { "name": "GitLab" }
+  "description": "GitLab MCP，支持仓库/Issue/MR/分支/CI Pipeline 全管理，支持自托管实例",
+  "author": { "name": "GitLab" },
+  "dependencies": ["git-context-prep"],
+  "userConfig": {
+    "personal_access_token": {
+      "type": "string",
+      "title": "GitLab Personal Access Token",
+      "description": "GitLab 个人访问令牌（GITLAB_PERSONAL_ACCESS_TOKEN）",
+      "sensitive": true,
+      "required": true
+    },
+    "api_url": {
+      "type": "string",
+      "title": "GitLab API URL",
+      "description": "GitLab API 地址（GITLAB_API_URL，自托管实例填写完整 URL，如 https://gitlab.example.com）",
+      "required": true
+    }
+  }
 }

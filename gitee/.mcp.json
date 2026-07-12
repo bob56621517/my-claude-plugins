@@ -3,7 +3,7 @@
     "command": "bunx",
     "args": ["-y", "@gitee/mcp-gitee@latest"],
     "env": {
-      "GITEE_ACCESS_TOKEN": "${GITEE_ACCESS_TOKEN}"
+      "GITEE_ACCESS_TOKEN": "${user_config.access_token}"
     }
   }
 }

@@ -3,8 +3,8 @@
     "command": "bunx",
     "args": ["gitlab-mcp"],
     "env": {
-      "GITLAB_API_URL": "${GITLAB_API_URL}",
-      "GITLAB_PERSONAL_ACCESS_TOKEN": "${GITLAB_PERSONAL_ACCESS_TOKEN}"
+      "GITLAB_API_URL": "${user_config.api_url}",
+      "GITLAB_PERSONAL_ACCESS_TOKEN": "${user_config.personal_access_token}"
     }
   }
 }

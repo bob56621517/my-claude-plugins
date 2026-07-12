@@ -1,5 +1,14 @@
 {
   "name": "postgres",
-  "description": "PostgreSQL 数据库 MCP，支持读写、表结构和 Schema 查询（项目级安装） [需要环境变量: POSTGRES_DB_URL]",
-  "author": { "name": "PostgreSQL" }
+  "description": "PostgreSQL 数据库 MCP，支持读写、表结构和 Schema 查询（项目级安装）",
+  "author": { "name": "PostgreSQL" },
+  "userConfig": {
+    "db_url": {
+      "type": "string",
+      "title": "PostgreSQL 连接 URL",
+      "description": "PostgreSQL 数据库连接字符串（POSTGRES_DB_URL，如 postgresql://user:pass@localhost:5432/db）",
+      "sensitive": true,
+      "required": true
+    }
+  }
 }

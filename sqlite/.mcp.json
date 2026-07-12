@@ -1,6 +1,6 @@
 {
   "sqlite": {
     "command": "uvx",
-    "args": ["mcp-server-sqlite", "--db-path", "${SQLITE_DB_PATH}"]
+    "args": ["mcp-server-sqlite", "--db-path", "${user_config.db_path}"]
   }
 }

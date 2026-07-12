@@ -1,5 +1,15 @@
 {
   "name": "gitee",
-  "description": "Gitee MCP，支持仓库/Issue/PR/通知/Release 全管理，支持个人/组织/企业 [需要环境变量: GITEE_ACCESS_TOKEN]",
-  "author": { "name": "Gitee" }
+  "description": "Gitee MCP，支持仓库/Issue/PR/通知/Release 全管理，支持个人/组织/企业",
+  "author": { "name": "Gitee" },
+  "dependencies": ["git-context-prep"],
+  "userConfig": {
+    "access_token": {
+      "type": "string",
+      "title": "Gitee Access Token",
+      "description": "Gitee 访问令牌（GITEE_ACCESS_TOKEN）",
+      "sensitive": true,
+      "required": true
+    }
+  }
 }
