@@ -1,6 +1,6 @@
 {
   "name": "unified-search",
-  "description": "统一搜索路由——自动拆分查询→路由→并行执行→单次降级，依赖独立插件提供搜索能力（Context7/Wikidata/博查/grep-app/fetch）",
+  "description": "统一搜索路由——自动拆分查询→路由→并行执行→单次降级，捆绑 MCP 搜索后端（Context7/Wikidata/博查/grep-app/fetch）",
   "author": { "name": "bob56621517" },
   "dependencies": [
     "context7",
@@ -8,5 +8,13 @@
     "bocha-search",
     "grep-app",
     "fetch"
-  ]
+  ],
+  "userConfig": {
+    "bocha_api_key": {
+      "type": "string",
+      "title": "博查搜索 API Key",
+      "description": "Bocha Search API 密钥（BOCHA_API_KEY）",
+      "required": true
+    }
+  }
 }
