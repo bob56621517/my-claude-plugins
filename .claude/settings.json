@@ -5,6 +5,7 @@
     "superpowers@claude-plugins-official": true,
     "claude-md-management-cn@my-claude-plugins": true,
     "caveman@claude-community": true,
-    "github@my-claude-plugins": true
+    "github@my-claude-plugins": true,
+    "git-context-prep@my-claude-plugins": true
   }
 }
