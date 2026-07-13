@@ -1,9 +1,6 @@
 {
   "filesystem": {
-    "command": "bun",
-    "args": ["${CLAUDE_PLUGIN_ROOT}/wrapper.ts"],
-    "env": {
-      "FILESYSTEM_ALLOWED_DIR": "${user_config.allowed_dir}"
-    }
+    "command": "bunx",
+    "args": ["@modelcontextprotocol/server-filesystem", "${user_config.allowed_dir}"]
   }
 }
