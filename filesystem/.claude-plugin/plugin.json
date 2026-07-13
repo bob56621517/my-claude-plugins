@@ -4,9 +4,9 @@
   "author": { "name": "Anthropic" },
   "userConfig": {
     "allowed_dir": {
-      "type": "directory",
+      "type": "string",
       "title": "允许访问的目录",
-      "description": "文件系统 MCP 允许访问的目录路径（FILESYSTEM_ALLOWED_DIR）",
+      "description": "文件系统 MCP 允许访问的目录路径。多个目录用 : 或 ; 分隔（如 /path/a:/path/b，环境变量 FILESYSTEM_ALLOWED_DIR）",
       "required": true
     }
   }
