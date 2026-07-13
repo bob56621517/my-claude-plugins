@@ -5,10 +5,7 @@
 ## 环境变量
 
 ```bash
-# 单目录
 FILESYSTEM_ALLOWED_DIR=/path/to/allowed/directory
-# 多目录（用 : 或 ; 分隔）
-FILESYSTEM_ALLOWED_DIR=/path/a:/path/b:/path/c
 ```
 
 ## 配置
@@ -16,7 +13,7 @@ FILESYSTEM_ALLOWED_DIR=/path/a:/path/b:/path/c
 ```json
 {
   "env": {
-    "FILESYSTEM_ALLOWED_DIR": "/path/to/project:/other/path"
+    "FILESYSTEM_ALLOWED_DIR": "/path/to/project"
   }
 }
 ```
