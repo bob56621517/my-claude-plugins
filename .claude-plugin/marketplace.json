@@ -181,6 +181,13 @@
       "category": "development"
     },
     {
+      "name": "feature-workflow",
+      "source": "./feature-workflow",
+      "description": "Feature 开发规范化流程——计划→审批→执行→验证，按模块/API 维度逐步推进（纯 Skill 插件，依赖 git-context-prep 触发）",
+      "author": { "name": "bob56621517" },
+      "category": "development"
+    },
+    {
       "name": "superpowers-zh",
       "source": {
         "source": "url",
@@ -204,3 +211,4 @@
     }
   ]
 }
+
