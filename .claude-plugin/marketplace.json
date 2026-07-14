@@ -183,8 +183,9 @@
     {
       "name": "superpowers-zh",
       "source": {
-        "source": "github",
-        "repo": "bob56621517/superpowers-zh"
+        "source": "url",
+        "url": "https://github.com/bob56621517/superpowers-zh.git",
+        "sha": "970a4373b9f92a846901372a48881a3386a0d580"
       },
       "description": "AI 编程超能力中文增强版：20 个 skills（14 翻译 + 4 中国原创 + 2 上游历史保留），支持 Claude Code / Hermes Agent / Cursor 等 18 款工具",
       "author": { "name": "jnMetaCode", "url": "https://github.com/jnMetaCode" },
@@ -193,8 +194,9 @@
     {
       "name": "mattpocock-skills",
       "source": {
-        "source": "github",
-        "repo": "bob56621517/mattpocock-skills"
+        "source": "url",
+        "url": "https://github.com/bob56621517/mattpocock-skills.git",
+        "sha": "66898f60e8c744e269f8ce06c2b2b99ce7660d5f"
       },
       "description": "Matt Pocock's agent skills for real engineering — grilling, spec/ticket flows, TDD, code review, domain modelling and more",
       "author": { "name": "Matt Pocock", "url": "https://github.com/mattpocock/skills" },
