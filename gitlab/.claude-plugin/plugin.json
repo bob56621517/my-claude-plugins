@@ -2,7 +2,7 @@
   "name": "gitlab",
   "description": "GitLab MCP，支持仓库/Issue/MR/分支/CI Pipeline 全管理，支持自托管实例",
   "author": { "name": "GitLab" },
-  "dependencies": ["git-context-prep"],
+  "dependencies": ["git-context-prep", "feature-workflow"],
   "userConfig": {
     "personal_access_token": {
       "type": "string",

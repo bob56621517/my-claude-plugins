@@ -2,7 +2,7 @@
   "name": "gitee",
   "description": "Gitee MCP，支持仓库/Issue/PR/通知/Release 全管理，支持个人/组织/企业",
   "author": { "name": "Gitee" },
-  "dependencies": ["git-context-prep"],
+  "dependencies": ["git-context-prep", "feature-workflow"],
   "userConfig": {
     "access_token": {
       "type": "string",
