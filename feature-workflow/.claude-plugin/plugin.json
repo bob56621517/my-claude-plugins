@@ -1,0 +1,10 @@
+{
+  "name": "feature-workflow",
+  "description": "Feature 开发规范化流程——计划→审批→执行→验证，按模块/API 维度逐步推进",
+  "author": {
+    "name": "bob56621517"
+  },
+  "skills": [
+    "feature-workflow"
+  ]
+}
