@@ -1,6 +1,6 @@
 {
   "filesystem": {
     "command": "npx",
-    "args": ["@modelcontextprotocol/server-filesystem", "${user_config.allowed_dir}"]
+    "args": ["-y", "@modelcontextprotocol/server-filesystem", "${user_config.allowed_dir}"]
   }
 }

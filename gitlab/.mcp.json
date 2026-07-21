@@ -1,7 +1,7 @@
 {
   "gitlab": {
     "command": "npx",
-    "args": ["gitlab-mcp"],
+    "args": ["-y", "gitlab-mcp"],
     "env": {
       "GITLAB_API_URL": "${user_config.api_url}",
       "GITLAB_PERSONAL_ACCESS_TOKEN": "${user_config.personal_access_token}"
