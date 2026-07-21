@@ -1,6 +1,6 @@
 {
   "server-memory": {
-    "command": "bunx",
+    "command": "npx",
     "args": ["@modelcontextprotocol/server-memory"]
   }
 }

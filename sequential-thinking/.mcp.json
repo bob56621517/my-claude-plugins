@@ -1,6 +1,6 @@
 {
   "sequential-thinking": {
-    "command": "bunx",
+    "command": "npx",
     "args": ["@modelcontextprotocol/server-sequential-thinking"]
   }
 }
