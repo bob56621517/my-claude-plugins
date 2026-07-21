@@ -1,6 +1,6 @@
 {
   "image-optimizer": {
     "command": "npx",
-    "args": ["mcp-image-optimizer"]
+    "args": ["-y", "mcp-image-optimizer"]
   }
 }

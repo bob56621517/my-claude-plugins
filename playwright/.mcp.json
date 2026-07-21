@@ -1,6 +1,6 @@
 {
   "playwright": {
     "command": "npx",
-    "args": ["@playwright/mcp"]
+    "args": ["-y", "@playwright/mcp"]
   }
 }

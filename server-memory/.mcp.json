@@ -1,6 +1,6 @@
 {
   "server-memory": {
     "command": "npx",
-    "args": ["@modelcontextprotocol/server-memory"]
+    "args": ["-y", "@modelcontextprotocol/server-memory"]
   }
 }

@@ -1,6 +1,6 @@
 {
   "markdown-formatter": {
     "command": "npx",
-    "args": ["@xjtlumedia/markdown-mcp-server"]
+    "args": ["-y", "@xjtlumedia/markdown-mcp-server"]
   }
 }

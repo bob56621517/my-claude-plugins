@@ -1,6 +1,6 @@
 {
   "ast-grep": {
     "command": "npx",
-    "args": ["@chousyn/ast-grep-mcp"]
+    "args": ["-y", "@chousyn/ast-grep-mcp"]
   }
 }
