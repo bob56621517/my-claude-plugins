@@ -143,7 +143,8 @@
       "source": "./filesystem",
       "description": "限定目录内的文件读写遍历操作（项目级安装） [需要环境变量: FILESYSTEM_ALLOWED_DIR]",
       "author": { "name": "Anthropic" },
-      "category": "development"
+      "category": "development",
+      "disabled": true
     },
     {
       "name": "server-memory",
